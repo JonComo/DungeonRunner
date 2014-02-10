@@ -15,15 +15,23 @@
 		86B9F6F918A84F83009D3AC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B9F6F818A84F83009D3AC0 /* main.m */; };
 		86B9F6FD18A84F83009D3AC0 /* DRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B9F6FC18A84F83009D3AC0 /* DRAppDelegate.m */; };
 		86B9F70018A84F83009D3AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86B9F6FE18A84F83009D3AC0 /* Main.storyboard */; };
-		86B9F70318A84F83009D3AC0 /* DRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B9F70218A84F83009D3AC0 /* DRViewController.m */; };
-		86B9F70618A84F83009D3AC0 /* DRMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B9F70518A84F83009D3AC0 /* DRMyScene.m */; };
-		86B9F70818A84F83009D3AC0 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 86B9F70718A84F83009D3AC0 /* Spaceship.png */; };
 		86B9F70A18A84F83009D3AC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86B9F70918A84F83009D3AC0 /* Images.xcassets */; };
 		86B9F71118A84F83009D3AC0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B9F71018A84F83009D3AC0 /* XCTest.framework */; };
 		86B9F71218A84F83009D3AC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B9F6EA18A84F83009D3AC0 /* Foundation.framework */; };
 		86B9F71318A84F83009D3AC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B9F6EE18A84F83009D3AC0 /* UIKit.framework */; };
 		86B9F71B18A84F83009D3AC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86B9F71918A84F83009D3AC0 /* InfoPlist.strings */; };
 		86B9F71D18A84F83009D3AC0 /* DungeonRunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B9F71C18A84F83009D3AC0 /* DungeonRunnerTests.m */; };
+		86B9F72818A84FC5009D3AC0 /* DRGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B9F72718A84FC5009D3AC0 /* DRGameViewController.m */; };
+		86B9F72B18A84FE8009D3AC0 /* DRDungeonScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B9F72A18A84FE8009D3AC0 /* DRDungeonScene.m */; };
+		86B9F72F18A85178009D3AC0 /* DRSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B9F72E18A85178009D3AC0 /* DRSprite.m */; };
+		86B9F73218A8589A009D3AC0 /* JCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B9F73118A8589A009D3AC0 /* JCMath.m */; };
+		86B9F73B18A871D7009D3AC0 /* glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 86B9F73A18A871D7009D3AC0 /* glow.png */; };
+		86B9F73F18A8791D009D3AC0 /* DRCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B9F73E18A8791D009D3AC0 /* DRCharacter.m */; };
+		86B9F74218A87B62009D3AC0 /* floorBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 86B9F74018A87B62009D3AC0 /* floorBlock.png */; };
+		86B9F74318A87B62009D3AC0 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 86B9F74118A87B62009D3AC0 /* player.png */; };
+		86B9F74618A87B70009D3AC0 /* DRPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B9F74518A87B70009D3AC0 /* DRPlayer.m */; };
+		86B9F74C18A8880F009D3AC0 /* DRLight.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B9F74B18A8880F009D3AC0 /* DRLight.m */; };
+		86B9F74E18A88AB9009D3AC0 /* torch.png in Resources */ = {isa = PBXBuildFile; fileRef = 86B9F74D18A88AB9009D3AC0 /* torch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,17 +57,30 @@
 		86B9F6FB18A84F83009D3AC0 /* DRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRAppDelegate.h; sourceTree = "<group>"; };
 		86B9F6FC18A84F83009D3AC0 /* DRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRAppDelegate.m; sourceTree = "<group>"; };
 		86B9F6FF18A84F83009D3AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		86B9F70118A84F83009D3AC0 /* DRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRViewController.h; sourceTree = "<group>"; };
-		86B9F70218A84F83009D3AC0 /* DRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRViewController.m; sourceTree = "<group>"; };
-		86B9F70418A84F83009D3AC0 /* DRMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRMyScene.h; sourceTree = "<group>"; };
-		86B9F70518A84F83009D3AC0 /* DRMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRMyScene.m; sourceTree = "<group>"; };
-		86B9F70718A84F83009D3AC0 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		86B9F70918A84F83009D3AC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		86B9F70F18A84F83009D3AC0 /* DungeonRunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DungeonRunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B9F71018A84F83009D3AC0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		86B9F71818A84F83009D3AC0 /* DungeonRunnerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DungeonRunnerTests-Info.plist"; sourceTree = "<group>"; };
 		86B9F71A18A84F83009D3AC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		86B9F71C18A84F83009D3AC0 /* DungeonRunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DungeonRunnerTests.m; sourceTree = "<group>"; };
+		86B9F72618A84FC5009D3AC0 /* DRGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRGameViewController.h; sourceTree = "<group>"; };
+		86B9F72718A84FC5009D3AC0 /* DRGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRGameViewController.m; sourceTree = "<group>"; };
+		86B9F72918A84FE8009D3AC0 /* DRDungeonScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRDungeonScene.h; sourceTree = "<group>"; };
+		86B9F72A18A84FE8009D3AC0 /* DRDungeonScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRDungeonScene.m; sourceTree = "<group>"; };
+		86B9F72D18A85178009D3AC0 /* DRSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSprite.h; sourceTree = "<group>"; };
+		86B9F72E18A85178009D3AC0 /* DRSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSprite.m; sourceTree = "<group>"; };
+		86B9F73018A8589A009D3AC0 /* JCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMath.h; sourceTree = "<group>"; };
+		86B9F73118A8589A009D3AC0 /* JCMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMath.m; sourceTree = "<group>"; };
+		86B9F73A18A871D7009D3AC0 /* glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glow.png; sourceTree = "<group>"; };
+		86B9F73D18A8791D009D3AC0 /* DRCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRCharacter.h; sourceTree = "<group>"; };
+		86B9F73E18A8791D009D3AC0 /* DRCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRCharacter.m; sourceTree = "<group>"; };
+		86B9F74018A87B62009D3AC0 /* floorBlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floorBlock.png; sourceTree = "<group>"; };
+		86B9F74118A87B62009D3AC0 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		86B9F74418A87B70009D3AC0 /* DRPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRPlayer.h; sourceTree = "<group>"; };
+		86B9F74518A87B70009D3AC0 /* DRPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRPlayer.m; sourceTree = "<group>"; };
+		86B9F74A18A8880F009D3AC0 /* DRLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRLight.h; sourceTree = "<group>"; };
+		86B9F74B18A8880F009D3AC0 /* DRLight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRLight.m; sourceTree = "<group>"; };
+		86B9F74D18A88AB9009D3AC0 /* torch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +130,8 @@
 		86B9F6E918A84F83009D3AC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				86B9F73018A8589A009D3AC0 /* JCMath.h */,
+				86B9F73118A8589A009D3AC0 /* JCMath.m */,
 				86B9F6EA18A84F83009D3AC0 /* Foundation.framework */,
 				86B9F6EC18A84F83009D3AC0 /* CoreGraphics.framework */,
 				86B9F6EE18A84F83009D3AC0 /* UIKit.framework */,
@@ -124,11 +147,9 @@
 				86B9F6FB18A84F83009D3AC0 /* DRAppDelegate.h */,
 				86B9F6FC18A84F83009D3AC0 /* DRAppDelegate.m */,
 				86B9F6FE18A84F83009D3AC0 /* Main.storyboard */,
-				86B9F70118A84F83009D3AC0 /* DRViewController.h */,
-				86B9F70218A84F83009D3AC0 /* DRViewController.m */,
-				86B9F70418A84F83009D3AC0 /* DRMyScene.h */,
-				86B9F70518A84F83009D3AC0 /* DRMyScene.m */,
-				86B9F70718A84F83009D3AC0 /* Spaceship.png */,
+				86B9F73918A871D7009D3AC0 /* media */,
+				86B9F73C18A8789E009D3AC0 /* Model */,
+				86B9F72C18A8509C009D3AC0 /* View */,
 				86B9F70918A84F83009D3AC0 /* Images.xcassets */,
 				86B9F6F318A84F83009D3AC0 /* Supporting Files */,
 			);
@@ -162,6 +183,43 @@
 				86B9F71918A84F83009D3AC0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86B9F72C18A8509C009D3AC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86B9F72618A84FC5009D3AC0 /* DRGameViewController.h */,
+				86B9F72718A84FC5009D3AC0 /* DRGameViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		86B9F73918A871D7009D3AC0 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				86B9F74D18A88AB9009D3AC0 /* torch.png */,
+				86B9F74018A87B62009D3AC0 /* floorBlock.png */,
+				86B9F74118A87B62009D3AC0 /* player.png */,
+				86B9F73A18A871D7009D3AC0 /* glow.png */,
+			);
+			path = media;
+			sourceTree = "<group>";
+		};
+		86B9F73C18A8789E009D3AC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				86B9F72918A84FE8009D3AC0 /* DRDungeonScene.h */,
+				86B9F72A18A84FE8009D3AC0 /* DRDungeonScene.m */,
+				86B9F72D18A85178009D3AC0 /* DRSprite.h */,
+				86B9F72E18A85178009D3AC0 /* DRSprite.m */,
+				86B9F74A18A8880F009D3AC0 /* DRLight.h */,
+				86B9F74B18A8880F009D3AC0 /* DRLight.m */,
+				86B9F73D18A8791D009D3AC0 /* DRCharacter.h */,
+				86B9F73E18A8791D009D3AC0 /* DRCharacter.m */,
+				86B9F74418A87B70009D3AC0 /* DRPlayer.h */,
+				86B9F74518A87B70009D3AC0 /* DRPlayer.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,10 +299,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86B9F73B18A871D7009D3AC0 /* glow.png in Resources */,
 				86B9F6F718A84F83009D3AC0 /* InfoPlist.strings in Resources */,
+				86B9F74318A87B62009D3AC0 /* player.png in Resources */,
 				86B9F70A18A84F83009D3AC0 /* Images.xcassets in Resources */,
-				86B9F70818A84F83009D3AC0 /* Spaceship.png in Resources */,
 				86B9F70018A84F83009D3AC0 /* Main.storyboard in Resources */,
+				86B9F74E18A88AB9009D3AC0 /* torch.png in Resources */,
+				86B9F74218A87B62009D3AC0 /* floorBlock.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +324,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86B9F70618A84F83009D3AC0 /* DRMyScene.m in Sources */,
+				86B9F74618A87B70009D3AC0 /* DRPlayer.m in Sources */,
+				86B9F72818A84FC5009D3AC0 /* DRGameViewController.m in Sources */,
+				86B9F73F18A8791D009D3AC0 /* DRCharacter.m in Sources */,
+				86B9F74C18A8880F009D3AC0 /* DRLight.m in Sources */,
 				86B9F6FD18A84F83009D3AC0 /* DRAppDelegate.m in Sources */,
-				86B9F70318A84F83009D3AC0 /* DRViewController.m in Sources */,
+				86B9F73218A8589A009D3AC0 /* JCMath.m in Sources */,
+				86B9F72B18A84FE8009D3AC0 /* DRDungeonScene.m in Sources */,
 				86B9F6F918A84F83009D3AC0 /* main.m in Sources */,
+				86B9F72F18A85178009D3AC0 /* DRSprite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,9 +459,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jon Como (XW4CN723TL)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DungeonRunner/DungeonRunner-Prefix.pch";
 				INFOPLIST_FILE = "DungeonRunner/DungeonRunner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -407,9 +475,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jon Como (XW4CN723TL)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DungeonRunner/DungeonRunner-Prefix.pch";
 				INFOPLIST_FILE = "DungeonRunner/DungeonRunner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
