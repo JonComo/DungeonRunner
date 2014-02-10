@@ -10,8 +10,6 @@
 
 @interface DRSprite : SKSpriteNode
 
-@property BOOL shouldScreenWrap;
-
 @property float red, green, blue;
 @property (nonatomic, assign) BOOL isDynamicallyLit;
 

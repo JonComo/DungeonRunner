@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>33574373-05E1-4728-8CF2-60CBAF667C93</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DungeonRunner</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>670EFEA3-3388-4865-8C0D-8A51BC2E30A5</key>
+		<string>https://github.com/JonComo/DungeonRunner.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DungeonRunner.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>670EFEA3-3388-4865-8C0D-8A51BC2E30A5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JonComo/DungeonRunner.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>670EFEA3-3388-4865-8C0D-8A51BC2E30A5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>670EFEA3-3388-4865-8C0D-8A51BC2E30A5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DungeonRunner</string>
+		</dict>
+	</array>
+</dict>
+</plist>

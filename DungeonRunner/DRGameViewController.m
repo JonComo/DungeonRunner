@@ -29,6 +29,9 @@
     
     SKView *view = (SKView *)self.view;
     
+    view.showsFPS = YES;
+    view.showsNodeCount = YES;
+    
     [view presentScene:scene];
 }
 

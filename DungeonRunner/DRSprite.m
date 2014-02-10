@@ -34,11 +34,11 @@
 -(void)update:(CFTimeInterval)currentTime
 {
     DRDungeonScene *scene = (DRDungeonScene *)self.scene;
-    
-    for (DRSprite *sprite in scene.nodeCamera.children)
+    if (self.position.x + scene.nodeCamera.position.x < -scene.size.width/2)
     {
-        if (sprite == self || sprite.zPosition >=1000) continue;
-        
+        //remove
+        [self removeFromParent];
+        return;
     }
     
     [self calculateColor];

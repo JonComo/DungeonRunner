@@ -16,6 +16,8 @@
 @implementation DRDungeonScene
 {
     DRPlayer *player;
+    
+    CGPoint genPoint;
 }
 
 -(id)initWithSize:(CGSize)size
@@ -32,57 +34,49 @@
         player.zPosition = 1;
         [self.nodeCamera addChild:player];
         
-        [self setupScene];
+        [self generateDungeonAtPoint:CGPointMake(0, 0)];
+        [self generateDungeonAtPoint:CGPointMake(self.size.width, 0)];
     }
     
     return self;
 }
 
--(void)setupScene
+-(void)generateDungeonAtPoint:(CGPoint)position
 {
-    //Floor
+    genPoint = position;
     
-    for (int i = 0; i<8; i++) {
+    //Floor
+    for (int i = 0; i<6; i++) {
         DRSprite *floor = [[DRSprite alloc] initWithTexture:[SKTexture textureWithImageNamed:@"floorBlock.png"]];
         
-        floor.shouldScreenWrap = YES;
-        floor.isDynamicallyLit = NO;
-        
-        floor.position = CGPointMake(i * floor.size.width, 0);
+        floor.position = CGPointMake(position.x + i * floor.size.width + floor.size.width/2, position.y);
         
         [self.nodeCamera addChild:floor];
     }
     
-    //Lights
     DRLight *light = [[DRLight alloc] initWithTexture:[SKTexture textureWithImageNamed:@"torch.png"]];
     
-    light.position = CGPointMake(self.size.width/2, self.size.height/2);
-    light.shouldScreenWrap = YES;
-    light.isDynamicallyLit = NO;
-    
+    light.position = CGPointMake(position.x + self.size.width/2, position.y + 150);
     [self.nodeCamera addChild:light];
     
-    light.lightColor = light.color;
-}
-
--(void)screenWrapSprite:(DRSprite *)sprite
-{
-    if (sprite.position.x + sprite.size.width/2 + self.nodeCamera.position.x < 0){
-        sprite.position = CGPointMake(sprite.position.x + sprite.size.width/2 + self.size.width, sprite.position.y);
-    }
+    light.lightColor = [UIColor colorWithRed:0.9 green:0.7 blue:0 alpha:1];
 }
 
 -(void)update:(CFTimeInterval)currentTime
 {
     /* Called before each frame is rendered */
     
+    NSLog(@"children: %i", self.nodeCamera.children.count);
+    
+    if (player.position.x > genPoint.x)
+    {
+        [self generateDungeonAtPoint:CGPointMake(genPoint.x + self.size.width, genPoint.y)];
+    }
+    
     for (DRSprite *sprite in self.nodeCamera.children){
         if ([sprite isKindOfClass:[DRSprite class]])
         {
             [sprite update:currentTime];
-            
-            if (sprite.shouldScreenWrap)
-                [self screenWrapSprite:sprite];
         }
     }
     

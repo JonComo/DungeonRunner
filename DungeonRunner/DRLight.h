@@ -10,6 +10,7 @@
 
 @interface DRLight : DRSprite
 
+@property BOOL shouldFlicker;
 @property (nonatomic, strong) UIColor *lightColor;
 
 @end

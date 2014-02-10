@@ -14,59 +14,93 @@
 @implementation DRLight
 {
     SKSpriteNode *glow;
+    CGFloat red, green, blue;
+    float flicker;
+}
+
+-(id)initWithTexture:(SKTexture *)texture
+{
+    if (self = [super initWithTexture:texture]) {
+        //init
+        
+        self.isDynamicallyLit = NO;
+    }
+    
+    return self;
 }
 
 -(void)setLightColor:(UIColor *)lightColor
 {
+    if (!_lightColor)
+    {
+        //get initial coloring
+        [lightColor getRed:&red green:&green blue:&blue alpha:nil];
+    }
+    
     _lightColor = lightColor;
     
-    glow = [[SKSpriteNode alloc] initWithTexture:[SKTexture textureWithImageNamed:@"glow.png"] color:self.color size:CGSizeMake(200, 200)];
+    if (!glow)
+    {
+        glow = [[SKSpriteNode alloc] initWithTexture:[SKTexture textureWithImageNamed:@"glow.png"] color:lightColor size:CGSizeMake(300, 300)];
+        
+        glow.alpha = 0.2;
+        glow.position = self.position;
+        glow.zPosition = 1000;
+        glow.colorBlendFactor = 1;
+        
+        glow.blendMode = SKBlendModeAdd;
+        
+        DRDungeonScene *scene = (DRDungeonScene *)self.scene;
+        [scene.nodeCamera addChild:glow];
+    }
     
-    glow.alpha = 0.8;
-    glow.position = self.position;
-    glow.zPosition = 1000;
-    glow.colorBlendFactor = 1;
-    
-    glow.blendMode = SKBlendModeAdd;
-    
-    DRDungeonScene *scene = (DRDungeonScene *)self.scene;
-    [scene.nodeCamera addChild:glow];
+    glow.color = lightColor;
+    self.color = lightColor;
+    self.colorBlendFactor = 1;
 }
 
 -(void)update:(CFTimeInterval)currentTime
 {
+    DRDungeonScene *scene = (DRDungeonScene *)self.scene;
+    
+    if (self.position.x + scene.nodeCamera.position.x < -scene.size.width/2)
+    {
+        //remove
+        [self removeFromParent];
+        return;
+    }
+    
     glow.position = self.position;
     
-    DRDungeonScene *scene = (DRDungeonScene *)self.scene;
+    if (self.shouldFlicker && arc4random()%3 == 0){
+        flicker = (0.5 - (float)(arc4random()%100)/100.0f) * 0.3;
+    }
     
     for (DRSprite *sprite in scene.nodeCamera.children)
     {
         if (sprite == self || ![sprite isKindOfClass:[DRSprite class]] || !sprite.isDynamicallyLit) continue;
         
-        if (self.lightColor){
-            [self lightSprite:sprite];
-        }
+        [self lightSprite:sprite];
     }
 }
 
 -(void)lightSprite:(DRSprite *)sprite
 {
-    if (!self.lightColor) return;
-    if (!sprite.isDynamicallyLit) return;
+    float distance = [JCMath distanceBetweenPoint:self.position andPoint:sprite.position sorting:NO];
     
-    CGFloat lightR, lightG, lightB;
+    if (distance > 300) return;
     
-    [self.lightColor getRed:&lightR green:&lightG blue:&lightB alpha:nil];
+    float divisor = (1+distance * 0.01);
     
-    float distance = [JCMath distanceBetweenPoint:self.position andPoint:sprite.position sorting:NO] * 0.01;
-    
-    sprite.red += lightR / (1+distance);
-    sprite.green += lightG / (1+distance);
-    sprite.blue += lightB / (1+distance);
+    sprite.red += (red + flicker) / divisor;
+    sprite.green += (green + flicker) / divisor;
+    sprite.blue += (blue + flicker) / divisor;
 }
 
 -(void)removeFromParent
 {
+    [super removeFromParent];
+    
     [glow removeFromParent];
     glow = nil;
 }
